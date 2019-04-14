@@ -35,6 +35,7 @@ thread_local = "0.3.6"
 regex-syntax = { path = "regex-syntax", version = "0.6.6" }
 # For compiling UTF-8 decoding into automata.
 utf8-ranges = "1.0.1"
+rsmalloc = { path = "../rsmalloc" }
 
 [dev-dependencies]
 # For examples.

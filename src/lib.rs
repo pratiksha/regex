@@ -517,7 +517,7 @@ another matching engine with fixed memory requirements.
 [`RegexBuilder::dfa_size_limit`](struct.RegexBuilder.html#method.dfa_size_limit).)
 */
 
-#![deny(missing_docs)]
+//#![deny(missing_docs)]
 #![cfg_attr(test, deny(warnings))]
 #![cfg_attr(feature = "pattern", feature(pattern))]
 
@@ -637,7 +637,13 @@ When the `s` flag is enabled, `.` matches any byte.
 
 In general, one should expect performance on `&[u8]` to be roughly similar to
 performance on `&str`.
-*/
+ */
+
+extern crate rsmalloc;
+
+#[global_allocator]
+static GLOBAL: rsmalloc::Allocator = rsmalloc::Allocator;
+
 #[cfg(feature = "use_std")]
 pub mod bytes {
     pub use re_builder::bytes::*;
