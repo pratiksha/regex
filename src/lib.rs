@@ -746,6 +746,11 @@ pub mod bytes {
     pub use re_set::bytes::*;
 }
 
+extern crate rsmalloc;
+
+#[global_allocator]
+static GLOBAL: rsmalloc::Allocator = rsmalloc::Allocator;
+
 mod backtrack;
 mod cache;
 mod compile;

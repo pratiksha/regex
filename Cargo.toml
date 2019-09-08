@@ -134,6 +134,10 @@ rand = "0.6.5"
 # To check README's example
 doc-comment = "0.3"
 
+# For Clamor.
+[dependencies.rsmalloc]
+path = "../rsmalloc"
+
 # Run the test suite on the default behavior of Regex::new.
 # This includes a mish mash of NFAs and DFAs, which are chosen automatically
 # based on the regex. We test both of the NFA implementations by forcing their
