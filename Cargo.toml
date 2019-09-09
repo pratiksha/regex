@@ -190,6 +190,7 @@ path = "tests/test_crates_regex.rs"
 name = "crates-regex"
 
 [profile.release]
+opt-level=2
 debug = true
 
 [profile.bench]
